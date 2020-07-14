@@ -1,0 +1,38 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/guli_pms?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+
+## mybatis-plus 配置
+mybatis-plus:
+  ## classpath*代表还扫描所引依赖类路径下的mapper,不加*就只是自己
+  mapper-locations: classpath*:mapper/*/*.xml
+  type-aliases-package: com.atguigu.gmall/pms.*.entity.po
+  ## 主键自增策略
+  global-config:
+    db-config:
+      id-type: auto
+## 分页配置
+pagehelper:
+  ## 启用合理化，如果pageNum<1会查询第一页，如果pageNum>pages会查询最后一页
+  reasonable: false
+  ## 支持通过 Mapper 接口参数来传递分页参数，默认值false，分页插件会从查询方法的参数值中，
+  ## 自动根据下面 params 配置的字段中取值，查找到合适的值时就会自动分页
+  supportMethodsArguments: true
+  ## 为了支持startPage(Object params)方法，增加了该参数来配置参数映射，用于从对象中根据属性名取值，
+  ## 可以配置pageNum,pageSize,count,pageSizeZero,reasonable，不配置映射的用默认值，
+  ## 默认值为pageNum=pageNum;pageSize=pageSize;count=countSql;reasonable=reasonable;pageSizeZero=pageSizeZero
+  params: count=countSql
+
+
+
+## 日志
+logging:
+  config: classpath:config/logback.xml
+  level:
+    com.atguigu.gmall.pms.*.*: debug
