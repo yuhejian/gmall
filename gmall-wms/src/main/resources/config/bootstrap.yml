@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: wms-server
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      # 地址
+      server-addr: 127.0.0.1:8848
+      # 配置中心
+      config:
+        enabled: false
+        namespace: 12d761d5-dae7-4bed-be63-11bdb6a1efa9
+        group: dev
+        file-extension: yml
+      # 注册中心
+      discovery:
+        enabled: true
+        namespace: 12d761d5-dae7-4bed-be63-11bdb6a1efa9

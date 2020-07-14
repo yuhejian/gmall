@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: ums-server
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      # 地址
+      server-addr: 127.0.0.1:8848
+      # 配置中心
+      config:
+        enabled: false
+        namespace: a29fddc6-1769-4294-8954-b10dc1654132
+        group: dev
+        file-extension: yml
+      # 注册中心
+      discovery:
+        enabled: true
+        namespace: a29fddc6-1769-4294-8954-b10dc1654132

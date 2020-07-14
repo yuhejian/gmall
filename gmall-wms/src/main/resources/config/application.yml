@@ -1,9 +1,9 @@
 server:
-  port: 8081
+  port: 8083
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/guli_pms?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://127.0.0.1:3306/guli_wms?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
 
@@ -12,7 +12,7 @@ spring:
 mybatis-plus:
   ## classpath*代表还扫描所引依赖类路径下的mapper,不加*就只是自己
   mapper-locations: classpath*:mapper/*/*.xml
-  type-aliases-package: com.atguigu.gmall.pms.*.entity.po
+  type-aliases-package: com.atguigu.gmall.wms.*.entity.po
   ## 主键自增策略
   global-config:
     db-config:
@@ -35,4 +35,7 @@ pagehelper:
 logging:
   config: classpath:config/logback.xml
   level:
-    com.atguigu.gmall.pms.*.*: debug
+    com.atguigu.gmall.wms.*.*: debug
+
+
+
