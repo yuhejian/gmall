@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>gmall-gateway</module>
         <module>gmall-core</module>
         <module>gmall-admin</module>
         <module>gmall-oms</module>

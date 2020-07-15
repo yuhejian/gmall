@@ -20,7 +20,7 @@ import javax.annotation.Resource;
 
 @Api(value = "AttrController", tags = {"商品属性(Attr)表控制层"})
 @RestController
-@RequestMapping("/attr")
+@RequestMapping("/pms/attr")
 public class AttrController {
     /**
      * 服务对象

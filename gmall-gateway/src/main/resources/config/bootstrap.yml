@@ -1,16 +1,16 @@
 spring:
   application:
-    name: pms-server
+    name: gateway-server
   profiles:
     active: dev
   cloud:
     nacos:
       # 地址
       server-addr: 127.0.0.1:8848
+      namespace: 6a25d11c-9a91-49fe-bc2f-6335f72f3c15
       # 配置中心
       config:
         enabled: false
-        namespace: 6a25d11c-9a91-49fe-bc2f-6335f72f3c15
         group: dev
         file-extension: yml
       # 注册中心

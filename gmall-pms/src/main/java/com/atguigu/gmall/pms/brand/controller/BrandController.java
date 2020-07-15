@@ -17,7 +17,7 @@ import javax.annotation.Resource;
  
 @Api(value = "BrandController", tags = {"品牌(Brand)表控制层"})
 @RestController
-@RequestMapping("/brand")
+@RequestMapping("/pms/brand")
 public class BrandController {
     /**
      * 服务对象

@@ -1,0 +1,30 @@
+server:
+  port: 8888
+## 服务映射配置
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: oms-route
+          uri: lb://oms-server
+          predicates:
+            - Path=/oms/**
+        - id: pms-route
+          uri: lb://pms-server
+          predicates:
+            - Path=/pms/**
+        - id: sms-route
+          uri: lb://sms-server
+          predicates:
+            - Path=/sms/**
+        - id: ums-route
+          uri: lb://ums-server
+          predicates:
+            - Path=/ums/**
+        - id: wms-route
+          uri: lb://wms-server
+          predicates:
+            - Path=/wms/**
