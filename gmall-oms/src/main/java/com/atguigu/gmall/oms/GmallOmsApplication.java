@@ -12,7 +12,7 @@ public class GmallOmsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GmallOmsApplication.class, args);
-        log.info("启动完毕");
+        log.info("订单服务启动成功");
     }
 
 }

@@ -12,7 +12,7 @@ public class GmallWmsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GmallWmsApplication.class, args);
-        log.info("启动完毕");
+        log.info("库存服务启动成功");
     }
 
 }

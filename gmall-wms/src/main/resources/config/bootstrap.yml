@@ -9,7 +9,7 @@ spring:
       server-addr: 127.0.0.1:8848
       # 配置中心
       config:
-        enabled: false
+        enabled: true
         namespace: 6a25d11c-9a91-49fe-bc2f-6335f72f3c15
         group: dev
         file-extension: yml

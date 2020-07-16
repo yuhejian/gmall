@@ -11,7 +11,7 @@ public class GmallPmsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GmallPmsApplication.class, args);
-        log.info("商城服务启动完毕");
+        log.info("商品服务启动成功");
     }
 
 }

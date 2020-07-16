@@ -12,7 +12,7 @@ public class GmallSmsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GmallSmsApplication.class, args);
-        log.info("启动完毕");
+        log.info("营销服务启动成功");
     }
 
 }
